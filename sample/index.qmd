@@ -1,7 +1,7 @@
 ---
 lang: ja
 title: "Quartoでスライドを作ってGitHub Pagesで公開するサンプル"
-author: "Essay4"
+author: "Essay42"
 format: revealjs
 jupyter: python3
 ---
