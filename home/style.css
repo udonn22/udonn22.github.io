@@ -1,0 +1,56 @@
+h1 {
+    color: black;
+    background-color: #E2ECBA;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;  /* Add this line to center the text vertically */
+    border-left: 5px solid #83A749;  /* Add this line to add a border to the left */
+    padding-left: 10px;  /* Add this line to create some space */
+}
+
+h2 {
+    color: 4699CA;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;  /* Add this line to center the text vertically */
+    border-left: 3px solid #83A749;  /* Add this line to add a border to the left */
+    padding-left: 10px;  /* Add this line to create some space */
+    margin-top: 30px;  /* Add this line to create some space */
+    margin-bottom: 5px;  /* Add this line to create some space */
+}
+
+header{
+    display: flex;
+}
+.home{
+    color:white;
+    background-color:#83A749;
+    height: 50px;
+    width:calc(100% - 140px);
+    padding-left: 20px;  /* Add this line to create some space */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.order {
+    color:white;
+    background-color:#83A749;
+    height: 50px;
+    width:140px;
+    display: flex;
+    padding-right: 0px;  /* Add this line to create some space */
+    align-items: center;
+}
+
+.face_logo {
+    background-color:#83A749;
+    display: flex;
+    align-items: center;
+    width:  16px;
+    height: 16px;
+    padding-top: 15px;
+    padding-bottom: 19px;
+    padding-left:17px;
+    padding-right:17px;
+}
