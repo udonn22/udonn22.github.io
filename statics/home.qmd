@@ -1,0 +1,21 @@
+---
+jupyter: python3
+---
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<header>
+<dev class="home"><b><u>HOME</u></b></dev>
+<a class="order" href="https://coconala.com/users/3496338"><b><u>ご依頼とご相談</u></b></a>
+</header>
+<h2>このサイトについて</h2>  
+このサイトでは、よくある統計学の分析手法についてPythonを使った例とともに解説しています。統計学は、データを分析し、現象を理解するための重要なツールです。あなたが統計学を学び、データを分析する際に役立つ情報を提供することを目指しています。  
+著者については、<a href="https://coconala.com/users/3496338"><u>このリンク</u></a>からご覧ください。
+
+<h2>トピック</h2>  
+
+<a href="https://udonn22.github.io/home/chusin-kyokugen">中心極限定理について</a>  
+<a href="https://udonn22.github.io/sample2">サンプル</a>  
+<a href="https://udonn22.github.io">ベース</a>
+
+
+
