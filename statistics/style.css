@@ -5,6 +5,7 @@ h1 {
     height: 50px;
     line-height: 50px;  /* Add this line to center the text vertically */
     border-left: 5px solid #83A749;  /* Add this line to add a border to the left */
+    font-weight: bold;
     padding-left: 10px;  /* Add this line to create some space */
 }
 
@@ -53,4 +54,51 @@ header{
     padding-bottom: 19px;
     padding-left:17px;
     padding-right:17px;
+}
+
+
+.speech-container {
+    display: flex;
+    align-items: center; /* テキストを上下中央に配置 */
+    margin: 0px;
+}
+
+.child-txt {
+    background-color: #CEE7D7;
+    color:black;
+    display: flex;
+    align-items: center; /* 画像とテキストを垂直方向に中央揃え */
+    padding: 10px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    margin-right: 120px;
+}
+
+.hakase-txt {
+    background-color: #CDE8E9;
+    color:black;
+    display: flex;
+    align-items: center; /* 画像とテキストを垂直方向に中央揃え */
+    padding: 10px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    margin-left: 75px;
+    flex-basis: 90%;
+}
+
+.child-pic{
+    max-width: 60px;
+    height: auto;
+    display: block;
+    margin-left:15px;
+    margin-right:5px;
+}
+
+.hakase-pic{
+    width: 60px;
+    height: auto;
+    display: block;
+    margin-left:10px;
+    margin-right:15px;
+    flex-basis: 10%;
 }

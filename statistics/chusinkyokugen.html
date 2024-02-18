@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>chusin-kyokugen</title>
+<title>chusinkyokugen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="chusin-kyokugen_files/libs/clipboard/clipboard.min.js"></script>
-<script src="chusin-kyokugen_files/libs/quarto-html/quarto.js"></script>
-<script src="chusin-kyokugen_files/libs/quarto-html/popper.min.js"></script>
-<script src="chusin-kyokugen_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="chusin-kyokugen_files/libs/quarto-html/anchor.min.js"></script>
-<link href="chusin-kyokugen_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="chusin-kyokugen_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="chusin-kyokugen_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="chusin-kyokugen_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="chusin-kyokugen_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="chusinkyokugen_files/libs/clipboard/clipboard.min.js"></script>
+<script src="chusinkyokugen_files/libs/quarto-html/quarto.js"></script>
+<script src="chusinkyokugen_files/libs/quarto-html/popper.min.js"></script>
+<script src="chusinkyokugen_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="chusinkyokugen_files/libs/quarto-html/anchor.min.js"></script>
+<link href="chusinkyokugen_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="chusinkyokugen_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="chusinkyokugen_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="chusinkyokugen_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="chusinkyokugen_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -134,6 +134,58 @@ window.Quarto = {
 </h2>
 <p>中心極限定理は、大数の法則の一種であり、サンプルサイズが大きくなるにつれて、標本平均が正規分布に近づくことを述べています。この定理により、標本の分布に関係なく、標本平均の分布は正規分布になります。中心極限定理は、統計学の多くの分野で使用され、標本の大きさや分布がどのようであっても適用される強力なツールです。</p>
 <p>これらの基本概念を理解することは、統計学の学習の基盤となります。データを分析し、現象を理解する際に、これらの概念を活用してください。</p>
+<p><link rel="stylesheet" type="text/css" href="style.css"></p>
+<h2 class="anchored">
+中心極限定理の説明
+</h2>
+<div class="speech-container">
+<img class="child-pic" src="pictures\kodomo.png" alt="子供の顔画像">
+<p class="child-txt">
+いいですね！どんなコードですか？
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+まずはコードを見てみてね。
+</div>
+<p><img class="hakase-pic" src="pictures\hakase.png"></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\kodomo.png" alt="子供の顔画像">
+<p class="child-txt">
+いいですね！どんなコードですか？
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+まずはコードを見てみてね。
+</div>
+<p><img class="hakase-pic" src="pictures\hakase.png"></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\kodomo.png" alt="子供の顔画像">
+<p class="child-txt">
+いいですね！どんなコードですか？
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+まずはコードを見てみてね。
+</div>
+<p><img class="hakase-pic" src="pictures\hakase.png"></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\kodomo.png" alt="子供の顔画像">
+<p class="child-txt">
+いいですね！どんなコードですか？
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+まずはコードを見てみてね。
+</div>
+<p><img class="hakase-pic" src="pictures\hakase.png"></p>
+</div>
 <link rel="stylesheet" type="text/css" href="style.css">
 <h1>
 中心極限定理の数値解析の例
@@ -144,7 +196,7 @@ window.Quarto = {
 1.サイコロの出目の生成
 </h2>
 <p>まずは、1から6が同じ確率で出るサイコロの出目を生成します。このような、確率の分布が一定の場合の分布を一様分布といいます。1から6までの一様分布からサンプルを1000個作成すると以下のようになります。</p>
-<div id="cell-2" class="cell" data-execution_count="1">
+<div id="cell-3" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> japanize_matplotlib</span>
@@ -166,7 +218,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="chusin-kyokugen_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="chusinkyokugen_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -176,7 +228,7 @@ window.Quarto = {
 2.中心極限定理の検証
 </h2>
 <p>次に、中心極限定理を検証します。中心極限定理によれば、n個のサンプルの平均は、nが大きくなるにつれて正規分布に近づくはずです。ここでは、一様分布のサンプルを3回作成しその平均<span class="math inline">\(\bar{X}_i\)</span>を求める試行を1セットとし、1000セット分の試行をした場合の平均の分布を確認します。1セット当たりの回数が多くなるほど、<span class="math inline">\(\bar{X}_i\)</span>(<span class="math inline">\(i\)</span>=1,2,…,1000)の分布は正規分布に近づくはずです。</p>
-<div id="cell-5" class="cell" data-execution_count="2">
+<div id="cell-6" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_histogram(n_values, n_trials):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 平均の計算</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    means <span class="op">=</span> np.mean(np.random.randint(<span class="dv">1</span>, <span class="dv">7</span>, (n_trials, n_values)), axis<span class="op">=</span><span class="dv">1</span>)</span>
@@ -190,42 +242,42 @@ window.Quarto = {
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">True</span>)</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-6" class="cell" data-execution_count="3">
+<div id="cell-7" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plot_histogram(n_values<span class="op">=</span><span class="dv">2</span>, n_trials<span class="op">=</span><span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="chusin-kyokugen_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="chusinkyokugen_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<div id="cell-7" class="cell" data-execution_count="4">
+<div id="cell-8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plot_histogram(n_values<span class="op">=</span><span class="dv">5</span>, n_trials<span class="op">=</span><span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="chusin-kyokugen_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="chusinkyokugen_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<div id="cell-8" class="cell" data-execution_count="5">
+<div id="cell-9" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plot_histogram(n_values<span class="op">=</span><span class="dv">10</span>, n_trials<span class="op">=</span><span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="chusin-kyokugen_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="chusinkyokugen_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<div id="cell-9" class="cell" data-execution_count="6">
+<div id="cell-10" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plot_histogram(n_values<span class="op">=</span><span class="dv">30</span>, n_trials<span class="op">=</span><span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="chusin-kyokugen_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="chusinkyokugen_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
