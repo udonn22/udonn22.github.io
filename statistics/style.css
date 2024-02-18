@@ -23,6 +23,7 @@ h2 {
 header{
     display: flex;
 }
+
 .home{
     color:white;
     background-color:#83A749;
@@ -56,21 +57,27 @@ header{
     padding-right:17px;
 }
 
-
 .speech-container {
     display: flex;
     align-items: center; /* テキストを上下中央に配置 */
-    margin: 0px;
 }
 
+.definition-container {
+    border: double 4px #000;
+    padding: 10px;
+    margin-left:10%;
+    margin-right:10%;
+}
 .child-txt {
     background-color: #CEE7D7;
     color:black;
     display: flex;
     align-items: center; /* 画像とテキストを垂直方向に中央揃え */
-    padding: 10px;
+    padding: 8px;
     border-radius: 10px;
     border-top-left-radius: 0px;
+    margin-top:5px;
+    margin-bottom:5px;
     margin-right: 120px;
 }
 
@@ -79,10 +86,12 @@ header{
     color:black;
     display: flex;
     align-items: center; /* 画像とテキストを垂直方向に中央揃え */
-    padding: 10px;
+    padding: 8px;
     border-radius: 10px;
     border-top-right-radius: 0px;
     margin-left: 75px;
+    margin-top:5px;
+    margin-bottom:5px;
     flex-basis: 90%;
 }
 
@@ -92,6 +101,8 @@ header{
     display: block;
     margin-left:15px;
     margin-right:5px;
+    border: 5px solid #CEE7D7;
+    border-radius: 50%;
 }
 
 .hakase-pic{
@@ -101,4 +112,6 @@ header{
     margin-left:10px;
     margin-right:15px;
     flex-basis: 10%;
+    border: 5px solid #CDE8E9;
+    border-radius: 50%;
 }
