@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>meanvar</title>
+<title>normaldist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="meanvar_files/libs/clipboard/clipboard.min.js"></script>
-<script src="meanvar_files/libs/quarto-html/quarto.js"></script>
-<script src="meanvar_files/libs/quarto-html/popper.min.js"></script>
-<script src="meanvar_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="meanvar_files/libs/quarto-html/anchor.min.js"></script>
-<link href="meanvar_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="meanvar_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="meanvar_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="meanvar_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="meanvar_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="normaldist_files/libs/clipboard/clipboard.min.js"></script>
+<script src="normaldist_files/libs/quarto-html/quarto.js"></script>
+<script src="normaldist_files/libs/quarto-html/popper.min.js"></script>
+<script src="normaldist_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="normaldist_files/libs/quarto-html/anchor.min.js"></script>
+<link href="normaldist_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="normaldist_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="normaldist_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="normaldist_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="normaldist_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -113,123 +113,260 @@ window.Quarto = {
 <header>
 <dev class="home"><b><u>HOME</u></b></dev> <a class="order" href="https://coconala.com/users/3496338"><b><u>ご依頼とご相談</u></b></a>
 </header>
-<p><link rel="stylesheet" type="text/css" href="style.css"></p>
 <h1>
-平均と分散: 統計の基本を理解する
+正規分布: 自然界と社会でのパターン
 </h1>
+<h2 class="anchored">
+正規分布ってどんな分布?
+</h2>
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_1_0.png" alt="子供の顔画像">
 <p class="child-txt">
-博士!今日は平均と分積について教えてください!
+博士、正規分布ってよく聞くけど、それはどういう意味なの?
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-平均と分積は、統計の基本で、とても重要なものなんだ。大量の情報を整理して全体を把握して、重要な傾向やパターンを見つけ出すことができるよ。
+正規分布は、自然界や人間の行動においてよく見られるデータの分布のことだよ。例えば、人々の身長やテストの点数がこの分布に従っていることが多いんだ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_2_2.png"></p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-平均はデータの中心を、分散はデータがどれだけ広がっているかを教えてくれるんだ!
+この分布は、下の図みたいにベルの形をしていて、データの多くが平均値の周りに集まり、極端に高い値や低い値は少なくなる特徴があるんだ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
 </div>
+<div id="cell-1" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install japanize-matplotlib</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> japanize_matplotlib</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 正規分布のパラメータ</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="dv">0</span>  <span class="co"># 平均</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="dv">1</span>  <span class="co"># 標準偏差</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 正規分布に従うデータの生成</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(mu <span class="op">-</span> <span class="dv">3</span><span class="op">*</span>sigma, mu <span class="op">+</span> <span class="dv">3</span><span class="op">*</span>sigma, <span class="dv">1000</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> norm.pdf(x, mu, sigma)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 正規分布のプロット</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">'正規分布'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'正規分布 (μ=0, σ=1)'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'確率密度'</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="normaldist_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="speech-container">
+<div class="hakase-txt">
+ちなみに式はこうだよ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+</div>
+<div class="definition-container">
+<p><span class="math display">\[
+f(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+\]</span></p>
+<p><span class="math display">\[
+ただし、xは確率変数、\mu は平均（期待値）、\sigma^2は分散、\sigma標準偏差です。
+\]</span></p>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<h2 class="anchored">
+正規分布はどんな時に使われる?
+</h2>
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_1_1.png" alt="子供の顔画像">
 <p class="child-txt">
-なるほど! 平均と分散で、中心と広がりを知ることができるんだ!データの全体を知るにはもってこいだね!
+どうしてベル状の形になるの?
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-平均は、全てのデータを足してその数で割ったもの。分散は、それぞれのデータが平均からどれだけ離れているかの平均から求められるよ! 式はこうなっているよ。
+いい質問だね。実は、結果に多くの独立した因子の影響うけると、その結果は自然と正規分布に従うことが多いんだ。たくさんの小さなランダムな影響が合わさって、最終的にはこのような形に落ち着くんだよ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_3_2.png"></p>
 </div>
-<link rel="stylesheet" type="text/css" href="style.css"> <br>
-<div class="definition-container">
-<p><span class="math display">\[平均: \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i\]</span> <span class="math display">\[分散: \sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i - \bar{x})^2\]</span> ここで、<span class="math inline">\(\bar{x}\)</span> は平均値、<span class="math inline">\(N\)</span> はデータの総数、<span class="math inline">\(x_i\)</span> は各データ点、<span class="math inline">\(\sum\)</span> は合計を示します。</p>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_1_0.png" alt="子供の顔画像">
+<p class="child-txt">
+なるほど、いろんな要素が組み合わさって、平均的な値が一番多くなるわけだね。正規分布はどんな時に役立つの?
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+正規分布は、予測や意思決定に非常に役立つんだ。例えば、学校のテストで平均点や合格基準を設定する時や、製品の品質管理、さらには科学研究で観測データの解析にも使われるよ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
+<p class="child-txt">
+わあ、正規分布って本当にいろんなところで使われているんだね! 次から見るデータが正規分布に従っているかどうか、気にしてみるよ!
+</p>
 </div>
 <link rel="stylesheet" type="text/css" href="style.css">
 <h1>
-平均と分散の例
+標準正規分布: データの標準化の理解
 </h1>
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_1_0.png" alt="子供の顔画像">
 <p class="child-txt">
-それを使って、実際にデータを見てみることはできるの？
+博士!標準正規分布って何ですか?
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-もちろんだよ。例えば、2つのグループAとBの人の身長を見てみよう。
+標準正規分布は、統計学で非常に重要な分布だよ。データの分布を標準化し、比較や解析を容易にするためのツールなんだ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_2_2.png"></p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+具体的には、平均が0、分散が1の正規分布のことを指すんだ。この標準化を行うことで、異なるデータセットを同じ尺度で比較することができるようになるんだよ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
 </div>
-<div id="cell-4" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># グループAとBの身長データ</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>heights_a <span class="op">=</span> np.array([<span class="dv">164</span>, <span class="dv">167</span>, <span class="dv">170</span>, <span class="dv">173</span>, <span class="dv">176</span>])</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>heights_b <span class="op">=</span> np.array([<span class="dv">155</span>, <span class="dv">160</span>, <span class="dv">165</span>, <span class="dv">170</span>, <span class="dv">175</span>])</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 平均と分散を計算</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>average_a <span class="op">=</span> np.mean(heights_a)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>variance_a <span class="op">=</span> np.var(heights_a)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>average_b <span class="op">=</span> np.mean(heights_b)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>variance_b <span class="op">=</span> np.var(heights_b)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 結果を表示</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"==== 身長データの計算結果 ===="</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"グループA - 平均身長: </span><span class="sc">{</span>average_a<span class="sc">}</span><span class="ss"> cm, 分散: </span><span class="sc">{</span>variance_a<span class="sc">}</span><span class="ss"> cm^2"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"グループB - 平均身長: </span><span class="sc">{</span>average_b<span class="sc">}</span><span class="ss"> cm, 分散: </span><span class="sc">{</span>variance_b<span class="sc">}</span><span class="ss"> cm^2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>==== 身長データの計算結果 ====
-グループA - 平均身長: 170.0 cm, 分散: 18.0 cm^2
-グループB - 平均身長: 165.0 cm, 分散: 50.0 cm^2</code></pre>
-</div>
-</div>
-<link rel="stylesheet" type="text/css" href="style.css">
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
-<p class="child-txt">
-グループAの方が平均は大きいけども分散はグループBの方が大きいね!もともとの5つの数字だと比較しにくいけど、平均と分散を知れば比較しやすいね!
-</p>
+<div class="hakase-txt">
+ちなみに標準正規分布の式はこうだよ。
 </div>
-<link rel="stylesheet" type="text/css" href="style.css">
-<h1>
-平均と分散の重要性
-</h1>
+<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+</div>
+<div class="definition-container">
+<p><span class="math display">\[
+f(x|0,1) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}
+\]</span></p>
+</div>
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_1_1.png" alt="子供の顔画像">
 <p class="child-txt">
-なぜ平均と分散を一緒に知ることが大切なの？平均だけじゃダメなの?
+とってもシンプルな形になったね! 標準化っていうのはデータを特定の形に変換することなんだね!
+</p>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<h2 class="anchored">
+データのばらつきと平均をそろえる方法とは?
+</h2>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_1_1.png" alt="子供の顔画像">
+<p class="child-txt">
+どうやって標準正規分布に変換するの?
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-平均だけでは、データがどのように分布しているか全てはわからないんだ。例えば、クラスに背が高い人と低い人が半分ずついたら、平均では普通の身長に見えるかもしれない。でも、分散を見れば、その差が大きいことがわかる。つまり、平均と分散を知ることで、データの全体像がよりよく理解できるんだよ。
+いい質問だね! データを標準正規分布に変換するには、「標準化」という手順を使うんだ。各データ点から平均を引いて、それを標準偏差で割るんだ。これによって、新しいデータセットの平均は0、分散は1になるよ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_3_2.png"></p>
 </div>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
+<div class="hakase-txt">
+ちなみに式はこうだよ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_2.png"></p>
+</div>
+<div class="definition-container">
+<p><span class="math display">\[
+z = \frac{x - \mu}{\sigma}
+\]</span></p>
+<p><span class="math display">\[
+ただし、xは確率変数、\mu は平均（期待値）、\sigma標準偏差です。
+\]</span></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_1_0.png" alt="子供の顔画像">
 <p class="child-txt">
-なるほど、だから分散も大事なんだね！
+へえ、そうするとどんなデータも同じ基準で考えられるようになるんだね! それで、標準正規分布が使われるのはどんな時なの?
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-その通りだよ。平均と分散は、データを理解するための最初のステップなんだ。
+標準正規分布は、科学研究から金融分析まで、幅広い分野で利用されているよ。例えば、テストの成績の比較、品質管理、リスク管理などに使われるんだ。標準化されたデータを使うことで、異なる条件や背景を持つデータ間で公平な比較が可能になるんだ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
 </div>
-<h1>
-まとめ
-</h1>
-<p>平均と分散は、データセットの基本的な特性を把握するために非常に重要です。これらの統計的概念を理解し、適切に活用することで、より情報に基づいた意思決定が可能になります。</p>
-<p>このブログ記事が、平均と分散の基本を理解し、統計がどのように私たちの日常生活や意思決定プロセスに役立つかを学ぶ一助となることを願っています。</p>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
+<p class="child-txt">
+わあ、標準正規分布って本当に便利なんだね! これからデータを見る時は、標準化のことも考えながら見てみるよ!
+</p>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<h2 class="anchored">
+標準化をした正規分布の例
+</h2>
+<div class="speech-container">
+<div class="hakase-txt">
+最後に正規分布を標準化したときの分布を比べてみるね
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
+<p class="child-txt">
+わあ、標準正規分布って本当に便利なんだね! これからデータを見る時は、標準化のことも考えながら見てみるよ!
+</p>
+</div>
+<div id="cell-7" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 平均が1、分散が2の分布のデータを標準化する</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 元の分布のパラメータ</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>mu_original <span class="op">=</span> <span class="dv">1</span>  <span class="co"># 平均</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>sigma_original <span class="op">=</span> np.sqrt(<span class="dv">2</span>)  <span class="co"># 分散が2のため、標準偏差はsqrt(2)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 正規分布に従うデータの生成（元の分布）</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>x_original <span class="op">=</span> np.linspace(mu_original <span class="op">-</span> <span class="dv">10</span><span class="op">*</span>sigma_original, mu_original <span class="op">+</span> <span class="dv">10</span><span class="op">*</span>sigma_original, <span class="dv">1000</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>y_original <span class="op">=</span> norm.pdf(x_original, mu_original, sigma_original)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># データの標準化</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>x_standardized <span class="op">=</span> (x_original <span class="op">-</span> mu_original) <span class="op">/</span> sigma_original</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>y_standardized <span class="op">=</span> norm.pdf(x_standardized, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 元の分布と標準化された分布のプロット</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">3</span>))</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 元の分布のプロット</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.plot(x_original, y_original, label<span class="op">=</span><span class="st">'標準化前(μ=1, σ²=2)'</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 標準化された分布のプロット</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>plt.plot(x_standardized, y_standardized, label<span class="op">=</span><span class="st">'標準化後(μ=0, σ²=1)'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'標準化前後の正規分布の比較'</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X'</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'確率密度'</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="normaldist_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
+<p class="child-txt">
+平均が0になって、分散も変わっているね! 標準化って簡単にできるんだね!
+</p>
+</div>
 <iframe src="writer_page.html" width="100%" height="350">
 </iframe>
 
