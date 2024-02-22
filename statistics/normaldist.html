@@ -120,7 +120,7 @@ window.Quarto = {
 正規分布ってどんな分布?
 </h2>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_1_0.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
 <p class="child-txt">
 博士、正規分布ってよく聞くけど、それはどういう意味なの?
 </p>
@@ -129,13 +129,13 @@ window.Quarto = {
 <div class="hakase-txt">
 正規分布は、自然界や人間の行動においてよく見られるデータの分布のことだよ。例えば、人々の身長やテストの点数がこの分布に従っていることが多いんだ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_2_2.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
 この分布は、下の図みたいにベルの形をしていて、データの多くが平均値の周りに集まり、極端に高い値や低い値は少なくなる特徴があるんだ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
 <div id="cell-1" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install japanize-matplotlib</span></span>
@@ -172,24 +172,36 @@ window.Quarto = {
 <link rel="stylesheet" type="text/css" href="style.css">
 <div class="speech-container">
 <div class="hakase-txt">
-ちなみに式はこうだよ。
+ちなみに確率分布の式はこうだよ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
 <div class="definition-container">
 <p><span class="math display">\[
 f(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-\]</span></p>
+\]</span> ただし、<span class="math inline">\(x\)</span>は確率変数、<span class="math inline">\(\mu\)</span>は平均（期待値）、<span class="math inline">\(\sigma^2\)</span>は分散、<span class="math inline">\(\sigma\)</span>は標準偏差です。</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+確率変数<span class="math inline">\(X\)</span>が正規分布に従うときは、以下のようにして書くことが多いから、覚えておくといいよ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
+</div>
 <p><span class="math display">\[
-ただし、xは確率変数、\mu は平均（期待値）、\sigma^2は分散、\sigma標準偏差です。
+X \sim N\left(\mu, \sigma^2\right)
 \]</span></p>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
+<p class="child-txt">
+単純にかけてわかりやすいね!
+</p>
 </div>
 <link rel="stylesheet" type="text/css" href="style.css">
 <h2 class="anchored">
 正規分布はどんな時に使われる?
 </h2>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_1_1.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_2_2.png" alt="子供の顔画像">
 <p class="child-txt">
 どうしてベル状の形になるの?
 </p>
@@ -198,10 +210,10 @@ f(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2
 <div class="hakase-txt">
 いい質問だね。実は、結果に多くの独立した因子の影響うけると、その結果は自然と正規分布に従うことが多いんだ。たくさんの小さなランダムな影響が合わさって、最終的にはこのような形に落ち着くんだよ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_2.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
 </div>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_1_0.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
 <p class="child-txt">
 なるほど、いろんな要素が組み合わさって、平均的な値が一番多くなるわけだね。正規分布はどんな時に役立つの?
 </p>
@@ -210,10 +222,10 @@ f(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2
 <div class="hakase-txt">
 正規分布は、予測や意思決定に非常に役立つんだ。例えば、学校のテストで平均点や合格基準を設定する時や、製品の品質管理、さらには科学研究で観測データの解析にも使われるよ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_3_1.png" alt="子供の顔画像">
 <p class="child-txt">
 わあ、正規分布って本当にいろんなところで使われているんだね! 次から見るデータが正規分布に従っているかどうか、気にしてみるよ!
 </p>
@@ -223,7 +235,7 @@ f(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2
 標準正規分布: データの標準化の理解
 </h1>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_1_0.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
 <p class="child-txt">
 博士!標準正規分布って何ですか?
 </p>
@@ -232,19 +244,19 @@ f(x|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2
 <div class="hakase-txt">
 標準正規分布は、統計学で非常に重要な分布だよ。データの分布を標準化し、比較や解析を容易にするためのツールなんだ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_2_2.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
 具体的には、平均が0、分散が1の正規分布のことを指すんだ。この標準化を行うことで、異なるデータセットを同じ尺度で比較することができるようになるんだよ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
 ちなみに標準正規分布の式はこうだよ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
 </div>
 <div class="definition-container">
 <p><span class="math display">\[
@@ -252,7 +264,7 @@ f(x|0,1) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}
 \]</span></p>
 </div>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_1_1.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_2_2.png" alt="子供の顔画像">
 <p class="child-txt">
 とってもシンプルな形になったね! 標準化っていうのはデータを特定の形に変換することなんだね!
 </p>
@@ -262,7 +274,7 @@ f(x|0,1) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}
 データのばらつきと平均をそろえる方法とは?
 </h2>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_1_1.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_2_2.png" alt="子供の顔画像">
 <p class="child-txt">
 どうやって標準正規分布に変換するの?
 </p>
@@ -271,24 +283,21 @@ f(x|0,1) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}
 <div class="hakase-txt">
 いい質問だね! データを標準正規分布に変換するには、「標準化」という手順を使うんだ。各データ点から平均を引いて、それを標準偏差で割るんだ。これによって、新しいデータセットの平均は0、分散は1になるよ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_2.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
 ちなみに式はこうだよ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_2.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
 </div>
 <div class="definition-container">
 <p><span class="math display">\[
 z = \frac{x - \mu}{\sigma}
-\]</span></p>
-<p><span class="math display">\[
-ただし、xは確率変数、\mu は平均（期待値）、\sigma標準偏差です。
-\]</span></p>
+\]</span> ただし、<span class="math inline">\(x\)</span>は確率変数、<span class="math inline">\(\mu\)</span>は平均（期待値）、<span class="math inline">\(\sigma\)</span>は標準偏差です。</p>
 </div>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_1_0.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
 <p class="child-txt">
 へえ、そうするとどんなデータも同じ基準で考えられるようになるんだね! それで、標準正規分布が使われるのはどんな時なの?
 </p>
@@ -297,10 +306,10 @@ z = \frac{x - \mu}{\sigma}
 <div class="hakase-txt">
 標準正規分布は、科学研究から金融分析まで、幅広い分野で利用されているよ。例えば、テストの成績の比較、品質管理、リスク管理などに使われるんだ。標準化されたデータを使うことで、異なる条件や背景を持つデータ間で公平な比較が可能になるんだ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_3_1.png" alt="子供の顔画像">
 <p class="child-txt">
 わあ、標準正規分布って本当に便利なんだね! これからデータを見る時は、標準化のことも考えながら見てみるよ!
 </p>
@@ -313,10 +322,10 @@ z = \frac{x - \mu}{\sigma}
 <div class="hakase-txt">
 最後に正規分布を標準化したときの分布を比べてみるね
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_1.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_3_1.png" alt="子供の顔画像">
 <p class="child-txt">
 わあ、標準正規分布って本当に便利なんだね! これからデータを見る時は、標準化のことも考えながら見てみるよ!
 </p>
@@ -362,7 +371,7 @@ z = \frac{x - \mu}{\sigma}
 </div>
 <link rel="stylesheet" type="text/css" href="style.css">
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_2_0.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_3_1.png" alt="子供の顔画像">
 <p class="child-txt">
 平均が0になって、分散も変わっているね! 標準化って簡単にできるんだね!
 </p>
