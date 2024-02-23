@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>home</title>
+<title>chi2dist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,20 +20,83 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="home_files/libs/clipboard/clipboard.min.js"></script>
-<script src="home_files/libs/quarto-html/quarto.js"></script>
-<script src="home_files/libs/quarto-html/popper.min.js"></script>
-<script src="home_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="home_files/libs/quarto-html/anchor.min.js"></script>
-<link href="home_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="home_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="home_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="home_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="home_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="chi2dist_files/libs/clipboard/clipboard.min.js"></script>
+<script src="chi2dist_files/libs/quarto-html/quarto.js"></script>
+<script src="chi2dist_files/libs/quarto-html/popper.min.js"></script>
+<script src="chi2dist_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="chi2dist_files/libs/quarto-html/anchor.min.js"></script>
+<link href="chi2dist_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="chi2dist_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="chi2dist_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="chi2dist_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="chi2dist_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -50,30 +113,185 @@ ul.task-list li input[type="checkbox"] {
 <header>
 <dev class="home"><b><u>HOME</u></b></dev> <a class="order" href="https://coconala.com/users/3496338"><b><u>ご依頼とご相談</u></b></a>
 </header>
-<h2 class="anchored">
-このサイトについて
-</h2>
-<p>このサイトでは、よくある統計学の分析手法についてPythonを使った例とともに解説しています。統計学は、データを分析し、現象を理解するための重要なツールです。あなたが統計学を学び、データを分析する際に役立つ情報を提供することを目指しています。<br>
-著者への依頼については、<a href="https://coconala.com/users/3496338"><u>このリンク</u></a>からご覧ください。</p>
-<h2 class="anchored">
-統計の基本的概念
-</h2>
-<p>・<a href="https://udonn22.github.io/statistics/meanvar">平均と分散</a><br> ・<a href="https://udonn22.github.io/statistics/normaldist">正規分布と標準正規分布</a><br> ・<a href="https://udonn22.github.io/statistics/chusinkyokugen">中心極限定理</a><br> ・<a href="https://udonn22.github.io/statistics/chi2dist">カイ二乗分布</a><br> ・<a href="">t分布</a>(作成中)<br> ・<a href="">F分布</a>(作成中)<br> ・<a href="">カイ二乗検定</a>(作成中)<br> ・<a href="">t検定</a>(作成中)<br> ・<a href="">F検定</a>(作成中)<br> ・<a href="">点推定と区間推定と検定</a>(作成中)<br></p>
-<!-- 
-<a href="https://udonn22.github.io/statistics/tdist">t分布</a>(作成中)<br>
-<a href="https://udonn22.github.io/statistics/fdist">F分布</a>(作成中)<br>
-<a href="https://udonn22.github.io/statistics/chi2test">カイ二乗検定</a>(作成中)<br>
-<a href="https://udonn22.github.io/statistics/ttest">t検定</a>(作成中)<br>
-<a href="https://udonn22.github.io/statistics/ftest">F検定</a>(作成中)<br>
-<a href="https://udonn22.github.io/statistics/estimation">点推定と区間推定と検定</a>(作成中)<br> -->
-<h2 class="anchored">
-異常検知の手法
-</h2>
-<p>
-作成中
+<h1>
+カイ二乗分布ってどんな分布?
+</h1>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
+<p class="child-txt">
+博士、今度はカイ二乗分布っていうのを聞いたんだけど、それは何？
 </p>
-<!-- <a href="https://udonn22.github.io/statistics/3sigma">3σ法</a>
-<a href="https://udonn22.github.io/statistics/Grubbs">グラブス検定</a> -->
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+カイ二乗分布は統計学でよく使われる分布の一つだよ。これは、独立した標準正規分布に従う複数の変数の二乗和が従う分布を指すんだ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_2.png" alt="子供の顔画像">
+<p class="child-txt">
+標準正規分布はこの間教えてもらったけど、その二乗和ってどういうこと？
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+もちろんだよ。標準正規分布ってのは、平均が0で、標準偏差が1の正規分布のことを言うんだったよね。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+そして、その分布に従うランダムな変数をいくつか取って、それぞれを二乗して足し合わせたものが、カイ二乗分布に従うってわけだ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+式で表すとこうだね。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
+</div>
+<div class="definition-container">
+<p><span class="math display">\[
+X_1, X_2, …, X_\nu \sim N\left(0, 1\right) \qquad i.i.d.
+\]</span> のとき、 <span class="math display">\[
+Y = X_1^2+X_2^2+…+X_\nu^2
+\]</span> の<span class="math inline">\(Y\)</span>は自由度<span class="math inline">\(\nu\)</span>のカイ二乗分布に従う。 ただし、<span class="math inline">\(i.i.d.\)</span>とは、独立同分布(independent and identically distributed)を表す。</p>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_3_2.png" alt="子供の顔画像">
+<p class="child-txt">
+自由度って何？
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+簡単に言うと、自由度とは分析に使われる独立した情報のピースの数のことだよ。例えば、2つの変数の二乗和を考えた場合、そのカイ二乗分布は2の自由度を持つと言うわけだ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+2つの変数は例えば、“薬を飲んだかどうか”と、“病気の症状の重さ”を数値にしたものがあるよ。自由度は、分布の形を決定づける重要な要素なんだ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<h1>
+どんなときにカイ二乗分布を使う？
+</h1>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_3.png" alt="子供の顔画像">
+<p class="child-txt">
+なるほどね。でも、どんなときにカイ二乗分布を使うの？
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+カイ二乗分布はデータの分散や予想外の偶然の一致をテストするのに非常に役立つんだ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+例えば、ある薬が効果があるかどうかを調べたいとき、実際のデータと期待されるデータがどれだけ違うかをカイ二乗分布を使って評価することができるんだ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
+<p class="child-txt">
+おお、それは面白そうだね！
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+とても面白いよ! そして、カイ二乗分布には自由度というパラメータがあってね。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_4_1.png" alt="子供の顔画像">
+<p class="child-txt">
+へえ、なんだか難しいけど、カイ二乗分布って大事なんだね！
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+まさにその通り。カイ二乗分布は統計的検定において非常に重要で、研究者がデータが持つ情報を最大限に活用するのを助けるんだよ。だから、科学や社会科学の多くの分野で使われているんだ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<h1>
+カイ二乗分布ってどんな形?
+</h1>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_3_2.png" alt="子供の顔画像">
+<p class="child-txt">
+カイ二乗分布ってどんな形になるの?正規分布からできるから、ベル状になるの?
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+いいや、カイ二乗分布は二乗した値を足し合わせたものだから、左右対称にならないんだ。実際にプログラミングで見てみよう。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
+</div>
+<div id="cell-4" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> japanize_matplotlib</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 自由度のリスト</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>degrees_of_freedom <span class="op">=</span> [<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">10</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Yの値</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">1000</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot each chi-squared distribution</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> df <span class="kw">in</span> degrees_of_freedom:</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    plt.plot(Y, stats.chi2.pdf(Y, df), label<span class="op">=</span><span class="ss">f'自由度:</span><span class="sc">{</span>df<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'カイ二乗分布の確率密度関数'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Y'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'確率密度'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chi2dist_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
+<p class="child-txt">
+ほんとだ! 左右が対象じゃないね! そして自由度が増えるにつれて、分布が右の方に移っていくんだね!
+</p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_4_1.png" alt="子供の顔画像">
+<p class="child-txt">
+博士、カイ二乗分布について教えてくれてありがとう！もっと勉強して、いつか自分でデータ分析ができるようになりたいな。
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+その好奇心は素晴らしいね。統計学は、世界を理解するための強力なツールだから、勉強を続けていればきっと素敵な発見ができるよ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
+</div>
+<iframe src="writer_page.html" width="100%" height="350">
+</iframe>
 
 </main>
 <!-- /main column -->
