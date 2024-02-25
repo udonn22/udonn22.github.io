@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tdist</title>
+<title>fdist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="tdist_files/libs/clipboard/clipboard.min.js"></script>
-<script src="tdist_files/libs/quarto-html/quarto.js"></script>
-<script src="tdist_files/libs/quarto-html/popper.min.js"></script>
-<script src="tdist_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="tdist_files/libs/quarto-html/anchor.min.js"></script>
-<link href="tdist_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="tdist_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="tdist_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="tdist_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="tdist_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="fdist_files/libs/clipboard/clipboard.min.js"></script>
+<script src="fdist_files/libs/quarto-html/quarto.js"></script>
+<script src="fdist_files/libs/quarto-html/popper.min.js"></script>
+<script src="fdist_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="fdist_files/libs/quarto-html/anchor.min.js"></script>
+<link href="fdist_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="fdist_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="fdist_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="fdist_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="fdist_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -114,74 +114,62 @@ window.Quarto = {
 <dev class="home"><b><u>HOME</u></b></dev> <a class="order" href="https://coconala.com/users/3496338"><b><u>ご依頼とご相談</u></b></a>
 </header>
 <h1>
-t分布について
+F分布について
 </h1>
 <h2 class="anchored">
-t分布ってどんな分布?
+F分布ってどんな分布?
 </h2>
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
 <p class="child-txt">
-博士、今度はt分布っていうのを聞いたんだけど、それは何？
+博士、今度はF分布について聞きたいんだけど、これは何？
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-t分布もまた統計学で非常に重要な分布だよ。t分布は、サンプルサイズが小さいときに、平均値の信頼区間を推定するのに使われるんだ。
+F分布は、統計学において非常に重要な役割を果たす分布だよ。これは、二つの異なるデータセットの分散がどの程度異なるかを比較するときに使用されるんだ。
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
-</div>
-<div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
-<p class="child-txt">
-信頼区間って何？
-</p>
-</div>
-<div class="speech-container">
-<div class="hakase-txt">
-信頼区間とは、あるパラメーター（例えば平均値）が存在すると推定される範囲のことだよ。言い換えると、僕たちが求めた推定値にどれだけ「信頼」を置いていいのかを数値で表す方法なんだ。
-</div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_2_2.png" alt="子供の顔画像">
 <p class="child-txt">
-そうなんだ。推定値を信頼できるかどうかを評価できるって大事そうだね! でも、なんで小さいサンプルサイズでt分布を使うの？正規分布じゃダメなの?
+分散って何だっけ？
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-いい質問だね。小さいサンプルサイズの場合、データに外れ値が入ったりしたら、正規分布だととても大きな影響を受けてしまうんだ。
-</div>
-<p><img class="hakase-pic" src="pictures\shibainu_4_1.png"></p>
-</div>
-<div class="speech-container">
-<div class="hakase-txt">
-でもt分布は、サンプルサイズが小さい場合にも、より正確な推定を可能にするんだよ。これは正規分布に比べて、t分布は裾が重くなっているから、外れ値の影響を受けにくいからなんだ。
+分散とは、データがその平均値からどの程度散らばっているかを示す数値だよ。例えば、クラスでのテストの点数がみんな似たような点数なら分散は小さいけど、点数がピンキリだと分散は大きくなるんだ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
 </div>
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_2_3.png" alt="子供の顔画像">
 <p class="child-txt">
-裾が重いってどういうこと？
+なるほどね。でも、どうしてF分布が必要なの？
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-裾が重いとは、グラフの端っこ、つまり値が大きい部分や小さい部分が、より広がっているという意味だよ。これによって、データの変動が大きい場合にも、その影響を考慮に入れることができるんだ。
+例えば、ある部品を作る二つの機械AとBがあって、それぞれの機械で製造された部品の品質のばらつきの大きさを比較したりするよ。ばらつきが大きくなるとそれだけ不良品を作ってしまうってことだから、とても大事なんだ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
 </div>
 <div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
+<p class="child-txt">
+おお、それは面白いね！F分布はどんな形をしているの？
+</p>
+</div>
+<div class="speech-container">
 <div class="hakase-txt">
-グラフで確認してみよう
+実際にプログラムを使って見てみよう。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
 <link rel="stylesheet" type="text/css" href="style.css">
 <h1>
-t分布の分布形状
+F分布の分布形状
 </h1>
 <div class="speech-container">
 <div class="hakase-txt">
@@ -190,12 +178,12 @@ t分布の分布形状
 <p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
 </div>
 <div class="definition-container">
-<p><span class="math display">\[U \sim N(0,1),\]</span> <span class="math display">\[V_m \sim \chi^2(m), \]</span> <span class="math display">\[U \text{と} V_m \text{は独立とするとき、}\]</span> <span class="math display">\[T = \frac{U}{\sqrt{V_m/m}} \]</span> <span class="math display">\[\text{は自由度$m$のt分布$t(m)$に従う.}\]</span></p>
+<p><span class="math display">\[U_l \sim \chi^2(l),\]</span> <span class="math display">\[V_m \sim \chi^2(m), \]</span> <span class="math inline">\(U_l \text{と} V_m \text{は独立とするとき、}\)</span> <span class="math display">\[F = \frac{U_l/l}{V_m/m}\]</span> <span class="math inline">\(\text{は自由度$(l,m)$のF分布$F(l,m)$に従う.}\)</span> <span class="math inline">\(\text{$l$を分子の自由度,$m$を分母の自由度と呼ぶ.}\)</span></p>
 </div>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_2_2.png" alt="子供の顔画像">
 <p class="child-txt">
-t分布にも自由度っていうのがあるんだね。これもカイ二乗分布と同じものなの?
+F分布には自由度が2つもあるんだね。これもカイ二乗分布と同じものなの?
 </p>
 </div>
 <div class="speech-container">
@@ -206,50 +194,90 @@ t分布にも自由度っていうのがあるんだね。これもカイ二乗�
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-平均値の信頼区間を考えるときは、サンプルサイズから1を引いた値になるよ。
+2つのデータセットの分散を比較するときは、それぞれのサンプルサイズから1を引いた値になるよ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
+</div>
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_4_1.png" alt="子供の顔画像">
+<p class="child-txt">
+じゃあ今回は2つの自由度を変えたグラフが見れるわけだね!
+</p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+そうだね。実際に見てみよう!
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
+</div>
+<div id="cell-2" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> f</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_f_distribution(lms):</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    自由度 (l, m) を変えた F分布の分布形状をプロットする関数。</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    - l_values: 分子の自由度のリスト</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    - m_values: 分母の自由度のリスト</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># xの範囲を定義</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">1000</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> l, m <span class="kw">in</span> lms:</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># F分布の確率密度関数 (PDF) を計算</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        pdf <span class="op">=</span> f.pdf(x, l, m)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># F分布のグラフをプロット</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        plt.plot(x, pdf, label<span class="op">=</span><span class="ss">f'F(l=</span><span class="sc">{</span>l<span class="sc">}</span><span class="ss">, m=</span><span class="sc">{</span>m<span class="sc">}</span><span class="ss">)'</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="st">'F Distribution with Different Degrees of Freedom'</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">'Value'</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">'Probability Density'</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    plt.grid()</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 分子の自由度を固定して、分母の自由度を変えたのリストの例</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>lms <span class="op">=</span> [(<span class="dv">5</span>, <span class="dv">2</span>), (<span class="dv">5</span>, <span class="dv">5</span>), (<span class="dv">5</span>, <span class="dv">100</span>)] <span class="co"># (分子の自由度, 分母の自由度)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 関数を呼び出してF分布をプロット</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plot_f_distribution(lms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="fdist_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="speech-container">
+<div class="hakase-txt">
+F分布は、右に長く尾を引く形をしているんだ。これは、2つのデータセットの分散の比が、常に正の値を取るためで、0以下になることはないからだよ。形は、比較する二つのサンプルの自由度によって変わるんだ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
 </div>
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
 <p class="child-txt">
-じゃあ自由度を変えたt分布のグラフってどうなるの?
+なるほど。分子の自由度<span class="math inline">\(l\)</span>を固定して、分母の自由度<span class="math inline">\(m\)</span>を大きくすれば、裾は小さくなるんだね!
 </p>
 </div>
-<div class="speech-container">
-<div class="hakase-txt">
-実際にグラフを見てみよう!
-</div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
-</div>
-<div id="cell-2" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-import necessary libraries after code execution state reset</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> japanize_matplotlib</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># t分布の自由度</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>degrees_of_freedom_t <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">100</span>]</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># X values for our plot</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>x_t <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">1000</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot each t-distribution</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> df <span class="kw">in</span> degrees_of_freedom_t:</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    plt.plot(x_t, stats.t.pdf(x_t, df), label<span class="op">=</span><span class="ss">f'自由度:</span><span class="sc">{</span>df<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'自由度ごとのt分布の確率分布'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'t'</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'確率分布'</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-5" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 分子の自由度を変えて、分母の自由度を固定したリストの例</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>lms <span class="op">=</span> [(<span class="dv">2</span>, <span class="dv">5</span>), (<span class="dv">5</span>,<span class="dv">5</span>), (<span class="dv">100</span>,<span class="dv">5</span>)] <span class="co"># (分子の自由度, 分母の自由度)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 関数を呼び出してF分布をプロット</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plot_f_distribution(lms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="tdist_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="fdist_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -258,143 +286,81 @@ t分布にも自由度っていうのがあるんだね。これもカイ二乗�
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
 <p class="child-txt">
-自由度が低いときのt分布はグラフの両端でも値が大きいね!これが”裾が広い”ってことだね!
+今度は分母の自由度<span class="math inline">\(m\)</span>を固定して、分子の自由度<span class="math inline">\(m\)</span>を大きくしたんだね。裾の大きは同じくらいに見えるけど、分布のピークの位置が変わっているね!
 </p>
 </div>
-<div class="speech-container">
-<div class="hakase-txt">
-そうなんだよ! 実はサンプルサイズと自由度をどんどん大きくしていくとt分布は正規分布に近づくんだ。逆に、サンプルの数が少ないときにt分布は外れ値の影響を減らせるんだよ!
+<div id="cell-7" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 分子の自由度を変えて、分母の自由度を固定したリストの例</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>lms <span class="op">=</span> [(<span class="dv">2</span>, <span class="dv">2</span>), (<span class="dv">5</span>,<span class="dv">5</span>), (<span class="dv">100</span>,<span class="dv">100</span>)] <span class="co"># (分子の自由度, 分母の自由度)</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 関数を呼び出してF分布をプロット</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plot_f_distribution(lms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="fdist_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
-<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="speech-container">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
+<p class="child-txt">
+今度は分母の自由度<span class="math inline">\(m\)</span>と分子の自由度<span class="math inline">\(m\)</span>を一緒に大きくしたんだね。自由度が大きくなるにつれ、裾は小さく、分布のピークは右に行くんだね!
+</p>
 </div>
 <link rel="stylesheet" type="text/css" href="style.css">
 <h1>
-t分布の利点
+F分布はいつ使う?
 </h1>
 <div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_3_1.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
 <p class="child-txt">
-じゃあ、t分布を使うと何がいいの？具体的に知りたいな。
+F分布を使うと、何が分かるの？
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-t分布を使う最大の利点は、小さいサンプルサイズでのデータ分析がより正確になることだよ。
+F分布を使うと、二つのグループ間での分散の違いが偶然によるものなのか、それとも実際に意味のある差があるのかを統計的に判断できるんだ。
+</div>
+<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
+</div>
+<div class="speech-container">
+<div class="hakase-txt">
+これは、例えば機械の性能の比較や、新しい教育方法が効果があるかどうかを調べるときなどに非常に役立つよ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
 </div>
 <div class="speech-container">
-<div class="hakase-txt">
-例えば、あるクラスでのテストの平均点を計算するとき、そのクラスの生徒数が少ない場合、t分布を用いて平均点の信頼区間を推定すると、その結果はより信頼できるものになるんだ。
-</div>
-<p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
-</div>
-<div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_1_1.png" alt="子供の顔画像">
+<img class="child-pic" src="pictures\shibainu_1_3.png" alt="子供の顔画像">
 <p class="child-txt">
-なるほどね！だから、小さいサンプルで研究するときは、t分布がとても役に立つんだね。
+なるほど、t分布は平均について知る時に使ったけど、F分布は分散について比較するときにとても大切なんだね！
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-その通り！t分布は、特に小規模な研究や前もってサンプルサイズを大きくできない場合に非常に有効なツールなんだ。これにより、限られたデータからでも、より正確な統計的推論を行うことができるようになるんだよ。
+まさにその通り。F分布は統計学における重要なツールの一つで、研究者がデータから意味のある結論を導き出すのを助けるんだ。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
-</div>
-<link rel="stylesheet" type="text/css" href="style.css">
-<h1>
-t分布と正規分布への外れ値の影響
-</h1>
-<div class="speech-container">
-<div class="hakase-txt">
-外れ値の影響について簡単に見てみよう。平均0、分散1の正規分布からランダムな数字を9つ作って、そこに外れ値として20を追加した、合計10個のサンプルの場合を考えてみるね。
-</div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
-</div>
-<div class="speech-container">
-<div class="hakase-txt">
-このサンプルから正規分布とt分布の分布を作成したものが以下になるんだ。
-</div>
-<p><img class="hakase-pic" src="pictures\shibainu_3_3.png"></p>
-</div>
-<div id="cell-6" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># データセットを生成（9つの正常値と1つの異常値）</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">0</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>normal_values <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">9</span>)  <span class="co"># 正常値</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>outlier <span class="op">=</span> np.array([<span class="dv">20</span>])  <span class="co"># 異常値</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>values_with_outlier <span class="op">=</span> np.append(normal_values, outlier)  <span class="co"># 正常値と異常値を結合</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 平均と標準偏差を計算</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>mean_outlier <span class="op">=</span> np.mean(values_with_outlier)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>std_outlier <span class="op">=</span> np.std(values_with_outlier, ddof<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 自由度（データ数-1）</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> <span class="bu">len</span>(values_with_outlier) <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 正規分布の範囲を定義</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>x_outlier <span class="op">=</span> np.linspace(mean_outlier <span class="op">-</span> <span class="dv">4</span><span class="op">*</span>std_outlier, mean_outlier <span class="op">+</span> <span class="dv">4</span><span class="op">*</span>std_outlier, <span class="dv">100</span>)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># t分布の範囲を定義</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>x_t <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">100</span>)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># グラフを描画</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 異常値を含む正規分布をプロット</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>plt.plot(x_outlier, stats.norm.pdf(x_outlier, mean_outlier, std_outlier), label<span class="op">=</span><span class="st">'異常値を含む正規分布'</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># t分布をプロット</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>plt.plot(x_t, stats.t.pdf(x_t, df, <span class="dv">0</span>, <span class="dv">1</span>), label<span class="op">=</span><span class="st">'t分布'</span>, color<span class="op">=</span><span class="st">'orange'</span>)</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co"># サンプルの位置に点をプロット</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>plt.scatter(values_with_outlier, np.zeros_like(values_with_outlier), color<span class="op">=</span><span class="st">'green'</span>, zorder<span class="op">=</span><span class="dv">5</span>, marker<span class="op">=</span><span class="st">'x'</span>, label<span class="op">=</span><span class="st">'サンプルの位置'</span>)</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'異常値を含む正規分布とt分布の比較'</span>)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)  <span class="co"># グリッドを表示</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tdist_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
 </div>
 <link rel="stylesheet" type="text/css" href="style.css">
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_3_2.png" alt="子供の顔画像">
 <p class="child-txt">
-正規分布は外れ値に引っ張られて中心が0から離れているね。分布も広がっているし、これだと平均値を精度よく求められないね。
+今日はF分布について教えてくれてありがとう！統計学がこんなにも魅力的だとは思わなかった。データを通じて様々な発見があるなんて、もっと深く掘り下げてみたいな。
 </p>
 </div>
 <div class="speech-container">
 <div class="hakase-txt">
-そうなんだ。サンプルサイズが小さいときは特に正規分布はとても外れ値の影響を受けやすいんだ。でもt分派は外れ値の影響がずっと小さくてすむんだ。
+その意欲、本当に素晴らしいね。統計学はね、科学研究だけでなく、工学や教育、さらには日々の生活の中でも広く応用されているよ。データを適切に読み解き、分析するスキルは、これからの社会でとっても重要になる。その探求心、ぜひ続けていってね。
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
 <div class="speech-container">
 <img class="child-pic" src="pictures\shibainu_4_1.png" alt="子供の顔画像">
 <p class="child-txt">
-t分布ってすごいね! 統計って面白いね。データから色んなことが分かると知って、もっと学びたくなったよ！
-</p>
-</div>
-<div class="speech-container">
-<div class="hakase-txt">
-素晴らしい心がけだね。統計は、科学や医学、経済学はもちろん、日常生活のあらゆる面で使われているんだ。データを正しく理解し、分析する能力は、これからの時代を生きる上で非常に価値があるから頑張ってね!
-</div>
-<p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
-</div>
-<div class="speech-container">
-<img class="child-pic" src="pictures\shibainu_2_1.png" alt="子供の顔画像">
-<p class="child-txt">
-はい!
+もちろんだよ！
 </p>
 </div>
 <iframe src="writer_page.html" width="100%" height="350">
