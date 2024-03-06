@@ -25,12 +25,12 @@ h2 {
 
 header{
     display: flex;
+    background-color:#83A749;
     margin:0px;
 }
 
 .home{
     color:white;
-    background-color:#83A749;
     height: 50px;
     width:calc(100% - 140px);
     padding-left: 20px;  /* Add this line to create some space */
@@ -41,24 +41,40 @@ header{
 
 .order {
     color:white;
-    background-color:#83A749;
     height: 50px;
-    width:140px;
+    width:120px;
     display: flex;
     padding-right: 0px;  /* Add this line to create some space */
     align-items: center;
 }
 
-.face_logo {
+img.logo {
     background-color:#83A749;
-    display: flex;
-    align-items: center;
-    width:  16px;
+    width: 36px;
+    height: 36px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:8px;
+    border: 2px solid #CEE7D7;
+    border-radius:100%;
+}
+
+img.logo_small {
+    width: 16px;
     height: 16px;
-    padding-top: 15px;
-    padding-bottom: 19px;
-    padding-left:17px;
-    padding-right:17px;
+    margin-left:10px;
+    padding: 1px;
+    border-bottom: 2px solid #000;
+}
+
+.face-pic{
+    max-width: 70px;
+    height: auto;
+    display: block;
+    margin-left:15px;
+    margin-right:5px;
+    border: 5px solid #CEE7D7;
+    border-radius: 50%;
 }
 
 .speech-container {
@@ -141,14 +157,4 @@ header{
     border-bottom: 40px solid #e7e7e7;
     padding-top: 20px;
     padding-bottom: 20px;
-}
-
-.face-pic{
-    max-width: 70px;
-    height: auto;
-    display: block;
-    margin-left:15px;
-    margin-right:5px;
-    border: 5px solid #CEE7D7;
-    border-radius: 50%;
 }
