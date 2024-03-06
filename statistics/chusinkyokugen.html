@@ -212,7 +212,9 @@ window.Quarto = {
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_4_3.png"></p>
 </div>
-<div id="cell-3" class="cell" data-execution_count="4">
+<div id="cell-4" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>【クリックでPythonコードを表示】</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> japanize_matplotlib</span>
@@ -231,6 +233,7 @@ window.Quarto = {
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'頻度の割合'</span>)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -274,7 +277,9 @@ window.Quarto = {
 </div>
 <p><img class="hakase-pic" src="pictures\shibainu_4_2.png"></p>
 </div>
-<div id="cell-6" class="cell" data-execution_count="51">
+<div id="cell-7" class="cell" data-execution_count="51">
+<details class="code-fold">
+<summary>【クリックでPythonコードを表示】</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 図を作成する関数を作成</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># n_values: 一度の試行でサイコロを振る回数</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># n_trials: 試行回数</span></span>
@@ -291,9 +296,13 @@ window.Quarto = {
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    plt.xlim([<span class="dv">1</span><span class="op">-</span><span class="dv">1</span><span class="op">/</span>n_values, <span class="dv">6</span><span class="op">+</span><span class="dv">1</span><span class="op">/</span>n_values<span class="op">*</span><span class="dv">2</span>])</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">True</span>)</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-<div id="cell-7" class="cell" data-execution_count="52">
+<div id="cell-8" class="cell" data-execution_count="52">
+<details class="code-fold">
+<summary>【クリックでPythonコードを表示】</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plot_histogram(n_values<span class="op">=</span><span class="dv">2</span>, n_trials<span class="op">=</span><span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -309,8 +318,11 @@ window.Quarto = {
 サイコロ2回だと、ピラミッドみたいな形だね!
 </div>
 </div>
-<div id="cell-9" class="cell" data-execution_count="55">
+<div id="cell-10" class="cell" data-execution_count="55">
+<details class="code-fold">
+<summary>【クリックでPythonコードを表示】</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plot_histogram(n_values<span class="op">=</span><span class="dv">5</span>, n_trials<span class="op">=</span><span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -326,8 +338,11 @@ window.Quarto = {
 サイコロ5回になると、かなりベルの形になるね!
 </div>
 </div>
-<div id="cell-11" class="cell" data-execution_count="56">
+<div id="cell-12" class="cell" data-execution_count="56">
+<details class="code-fold">
+<summary>【クリックでPythonコードを表示】</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plot_histogram(n_values<span class="op">=</span><span class="dv">100</span>, n_trials<span class="op">=</span><span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
